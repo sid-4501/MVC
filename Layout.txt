@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+@RenderBody()
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>@ViewBag.Title</title>
+</head>
+<body style="background-color:white">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" ><b>Chikitsa Hospital Management System</b></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">About</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    &nbsp;&nbsp;&nbsp;
+                    <button class="btn btn-light" onclick="location.href='@Url.Action("Logout","Index", "Home")'" type="submit">Logout</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="d-flex flex-column flex-shrink-0 bg-light siddhi" style="width: 100px; height: 85vh">
+        <br><br><br>
+        <h3 style="text-align:center; color:blueviolet">Welcome Admin</h3><br><br>
+        <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+            <li class="nav-item"> <a href="#" class="nav-link py-3 border-bottom"> <i class="fa fa-home"></i> <small>@Html.ActionLink("Departments", "Index", "Home")</small> </a> </li>
+            <li> <a href="#" class="nav-link py-3 border-bottom"> <i class="fa fa-dashboard"></i> <small>@Html.ActionLink("patients", "Index", "Home")</small> </a> </li>
+            <li> <a href="#" class="nav-link py-3 border-bottom"> <i class="fa fa-first-order"></i> <small>@Html.ActionLink("Doctors & Staff Details", "Index", "Home")</small> </a> </li>
+            <li> <a href="#" class="nav-link py-3 border-bottom"> <i class="fa fa-cog"></i> <small>@Html.ActionLink("Equipments", "Index", "Home")</small> </a> </li>
+            @*<li> <a href="#" class="nav-link py-3 border-bottom"> <i class="fa fa-bookmark"></i> <small></small> </a> </li>*@
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Chikitsa Private Limited </br> <small>mob no: 1234567899</small></p>
+    </footer>
+    <style>
+        .siddhi {
+            width: 198px !important;
+        }
+
+        .navbar-brand {
+            color: purple !important;
+        }
+
+        .nav-link {
+            color: purple !important;
+        }
+
+        .bg-light {
+            background-color: #8ef7ef !important;
+            border-bottom: 1px solid #a6a9ab !important;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #a6a9ab !important;
+        }
+
+        .nav-pills {
+            width: 193px;
+        }
+
+        .content {
+            background-color: white;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: mediumslateblue;
+            width: 100%;
+            height: 50px;
+            float: right;
+            text-align: center;
+        }
+    </style>
+</body>
+</html>
